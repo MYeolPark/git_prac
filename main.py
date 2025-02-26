@@ -2,6 +2,8 @@
 
 from save_info import *
 from calculate_birth_year import *
+from validate_age import *
+
 
 def get_user_info():
     name = input("이름을 입력하세요: ")
@@ -14,10 +16,10 @@ def print_greeting(name, age):
 def main():
     name, age = get_user_info()
     print_greeting(name, age)
-
+    
     save_user_info(name,age)
     birth_year=calculate_birth_year(age)
-
+    validate_age(age)
 
 if __name__ == "__main__":
     main()
